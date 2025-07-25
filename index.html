@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Alankriti Creations</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="images/january.jpg" />
+  <link rel="icon" href="images/bag1.jpg" />
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Hero Section -->
   <header class="hero">
-    <h1>Alankriti Creations</h1>
+    <div class="overlay"></div>
+    <h1 class="animated">Alankriti Creations</h1>
     <p>Customised Tote Bags – Your Style, Your Way</p>
     <a href="#products" class="btn buy-btn">Buy Now</a>
     <div class="cart-icon">
@@ -20,7 +21,7 @@
   </header>
 
   <!-- About Section -->
-  <section class="about container">
+  <section class="about">
     <h2>Unleash Your Creativity</h2>
     <p>
       Alankriti Creation Custom Tote Bags: Your Style, Your Way<br><br>
@@ -30,7 +31,7 @@
   </section>
 
   <!-- Features Section -->
-  <section class="features container">
+  <section class="features">
     <h2>Why Choose Us?</h2>
     <ul>
       <li><strong>🎨 Design Your Dream:</strong> If you imagine it, we can print it!</li>
@@ -41,44 +42,39 @@
     </ul>
   </section>
 
-  <!-- Product Section -->
-  <section id="products" class="container">
+  <!-- Products Section -->
+  <section id="products" class="gallery">
     <h2>Our Tote Bags</h2>
-    <div class="products">
-      <div class="product">
-        <img src="images/january.jpg" alt="Classic Tote" />
-        <h3>Classic Tote</h3>
-        <p class="price">₹299</p>
-        <button class="add-to-cart" onclick="addToCart(5)">Add to Cart</button>
-        <button class="buy-now" onclick="window.location.href='cart.html'">Buy Now</button>
-      </div>
-      <div class="product">
-        <img src="images/june.jpg" alt="Floral Tote" />
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="images/january.jpg" alt="Floral Tote" />
         <h3>Floral Tote</h3>
         <p class="price">₹299</p>
-        <button class="add-to-cart" onclick="addToCart(1)">Add to Cart</button>
-        <button class="buy-now" onclick="window.location.href='cart.html'">Buy Now</button>
+        <button class="btn add-cart-btn" onclick="addToCart(1)">Add to Cart</button>
       </div>
-      <div class="product">
+      <div class="product-card">
         <img src="images/march.jpg" alt="Canvas Love" />
         <h3>Canvas Love</h3>
         <p class="price">₹299</p>
-        <button class="add-to-cart" onclick="addToCart(2)">Add to Cart</button>
-        <button class="buy-now" onclick="window.location.href='cart.html'">Buy Now</button>
+        <button class="btn add-cart-btn" onclick="addToCart(2)">Add to Cart</button>
       </div>
-      <div class="product">
+      <div class="product-card">
         <img src="images/april.jpg" alt="Elegant Print" />
         <h3>Elegant Print</h3>
         <p class="price">₹299</p>
-        <button class="add-to-cart" onclick="addToCart(3)">Add to Cart</button>
-        <button class="buy-now" onclick="window.location.href='cart.html'">Buy Now</button>
+        <button class="btn add-cart-btn" onclick="addToCart(3)">Add to Cart</button>
       </div>
-      <div class="product">
+      <div class="product-card">
         <img src="images/may.jpg" alt="Eco Chic" />
         <h3>Eco Chic</h3>
         <p class="price">₹299</p>
-        <button class="add-to-cart" onclick="addToCart(4)">Add to Cart</button>
-        <button class="buy-now" onclick="window.location.href='cart.html'">Buy Now</button>
+        <button class="btn add-cart-btn" onclick="addToCart(4)">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/june.jpg" alt="Classic Tote" />
+        <h3>Classic Tote</h3>
+        <p class="price">₹299</p>
+        <button class="btn add-cart-btn" onclick="addToCart(5)">Add to Cart</button>
       </div>
     </div>
   </section>
