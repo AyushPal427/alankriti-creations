@@ -1,36 +1,50 @@
-body {
+* {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background: #fff;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.hero {
-  background: #f4e1e1;
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background: #fffdf8;
+  color: #333;
+}
+
+header.hero {
+  background: #f7d9e3;
   padding: 60px 20px;
   text-align: center;
 }
 
-.hero h1 {
-  font-size: 2.5em;
+header.hero h1 {
+  font-size: 2.8rem;
   margin-bottom: 10px;
 }
 
-.hero .btn {
-  background: #e75480;
-  color: white;
-  padding: 12px 24px;
-  text-decoration: none;
-  border-radius: 4px;
-  margin-top: 15px;
-  display: inline-block;
+header.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
 }
 
-.about, .features, .how-it-works, .buy, .gallery {
+.btn {
+  display: inline-block;
+  background: #e75480;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 10px 5px;
+}
+
+.btn:hover {
+  background: #c8436e;
+}
+
+section {
   padding: 40px 20px;
-  max-width: 800px;
-  margin: auto;
+  text-align: center;
 }
 
 .features ul {
@@ -39,32 +53,73 @@ body {
 }
 
 .features li {
-  margin: 15px 0;
+  margin: 10px 0;
+  font-size: 1.1rem;
 }
 
-.images {
+.product-grid {
   display: flex;
-  gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 20px;
 }
 
-.images img {
-  width: 200px;
-  height: auto;
+.product-card {
+  background: #fff;
+  border: 1px solid #ddd;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  width: 250px;
+  padding: 20px;
 }
 
-.buy .btn, .whatsapp {
-  background: #28a745;
-  color: white;
+.product-card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.cart-btn {
+  background: #444;
   margin-top: 10px;
 }
 
+.contact a {
+  color: #e75480;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
 footer {
-  text-align: center;
+  background: #f0f0f0;
   padding: 20px;
-  background: #f4f4f4;
-  margin-top: 40px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footer-links a {
+  color: #333;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .product-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header.hero h1 {
+    font-size: 2rem;
+  }
+
+  header.hero p {
+    font-size: 1rem;
+  }
 }
