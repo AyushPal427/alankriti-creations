@@ -1,8 +1,9 @@
 const products = [
-  { id: 1, name: "Floral Tote", price: 299, image: "images/april.jpg" },
-  { id: 2, name: "Canvas Love", price: 299, image: "images/may.jpg" },
-  { id: 3, name: "Elegant Print", price: 299, image: "images/june.jpg" },
-  { id: 4, name: "Eco Chic", price: 299, image: "images/march.jpg" }
+  { id: 1, name: "Floral Tote", price: 299, image: "images/june.jpg" },
+  { id: 2, name: "Canvas Love", price: 299, image: "images/march.jpg" },
+  { id: 3, name: "Elegant Print", price: 299, image: "images/april.jpg" },
+  { id: 4, name: "Eco Chic", price: 299, image: "images/may.jpg" },
+  { id: 5, name: "Classic Tote", price: 299, image: "images/january.jpg" } // ✅ NEW ITEM
 ];
 function loadCart(){return JSON.parse(localStorage.getItem("cart"))||[];}
 function saveCart(cart){localStorage.setItem("cart", JSON.stringify(cart));}
