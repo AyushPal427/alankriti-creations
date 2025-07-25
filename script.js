@@ -1,10 +1,9 @@
 const products = [
-  { id:1,name:"Floral Tote",price:299,image:"images/bag1.jpg" },
-  { id:2,name:"Canvas Love",price:299,image:"images/bag2.jpg" },
-  { id:3,name:"Elegant Print",price:299,image:"images/bag3.jpg" },
-  { id:4,name:"Eco Chic",price:299,image:"images/bag4.jpg" }
+  { id: 1, name: "Floral Tote", price: 299, image: "images/april.jpg" },
+  { id: 2, name: "Canvas Love", price: 299, image: "images/may.jpg" },
+  { id: 3, name: "Elegant Print", price: 299, image: "images/june.jpg" },
+  { id: 4, name: "Eco Chic", price: 299, image: "images/march.jpg" }
 ];
-
 function loadCart(){return JSON.parse(localStorage.getItem("cart"))||[];}
 function saveCart(cart){localStorage.setItem("cart", JSON.stringify(cart));}
 function updateCartIcon(){const count=loadCart().reduce((s,i)=>s+i.quantity,0);document.getElementById("cart-count").innerText=count;}
