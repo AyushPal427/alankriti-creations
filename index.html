@@ -10,83 +10,84 @@
   <header class="hero">
     <h1>Alankriti Creations</h1>
     <p>Customised Tote Bags – Your Style, Your Way</p>
-    <a href="#products" class="btn">Shop Now</a>
-    <div class="cart-icon" onclick="toggleCart()">🛒 Cart (<span id="cart-count">0</span>)</div>
+    <a href="#buy" class="btn">Buy Now</a>
   </header>
 
-  <section class="products" id="products">
-    <h2>Our Tote Bags</h2>
+  <section class="about">
+    <h2>Unleash Your Creativity</h2>
+    <p>
+      Alankriti Creation Custom Tote Bags: Your Style, Your Way<br><br>
+      Unleash your unique style with Alankriti Creation's custom-designed tote bags! More than just a bag, it's a canvas for your creativity.
+    </p>
+  </section>
+
+  <section class="features">
+    <h2>Why Choose Us?</h2>
+    <ul>
+      <li><strong>🎨 Design Your Dream:</strong> From a photo, quote, logo or artwork – if you imagine it, we can print it!</li>
+      <li><strong>👜 Premium Quality:</strong> High-quality fabric made to last.</li>
+      <li><strong>📦 Spacious & Practical:</strong> Carry all your essentials in style.</li>
+      <li><strong>🎁 Perfect Gift:</strong> Great for birthdays, corporate events & more.</li>
+      <li><strong>🌱 Eco-Friendly:</strong> Say goodbye to single-use plastics.</li>
+    </ul>
+  </section>
+
+  <section class="how-it-works">
+    <h2>How It Works</h2>
+    <p>Send us your design idea – we’ll bring it to life on a premium tote bag. I can even hand-draw your vision!</p>
+  </section>
+
+  <section class="products">
+    <h2 style="text-align:center;">Our Products</h2>
     <div class="product-grid">
-
-      <!-- Product 1 -->
       <div class="product-card">
-        <img src="https://i.imgur.com/yYcQGQZ.jpg" alt="Tote Bag 1">
-        <h3>Floral Custom Tote</h3>
-        <p class="price">₹299</p>
-        <button onclick="addToCart('Floral Custom Tote', 299)">Add to Cart</button>
+        <img src="images/april.jpg" alt="April Tote Bag" />
+        <h3>April Tote Bag</h3>
+        <p>₹299</p>
+        <a href="https://rzp.io/l/alankriti-bags" class="btn buy-now">Buy Now</a>
+        <button class="btn add-to-cart">Add to Cart</button>
       </div>
-
-      <!-- Product 2 -->
       <div class="product-card">
-        <img src="https://i.imgur.com/Bc3Ewz8.jpg" alt="Tote Bag 2">
-        <h3>Modern Quote Tote</h3>
-        <p class="price">₹299</p>
-        <button onclick="addToCart('Modern Quote Tote', 299)">Add to Cart</button>
+        <img src="images/january.jpg" alt="January Tote Bag" />
+        <h3>January Tote Bag</h3>
+        <p>₹299</p>
+        <a href="https://rzp.io/l/alankriti-bags" class="btn buy-now">Buy Now</a>
+        <button class="btn add-to-cart">Add to Cart</button>
       </div>
-
-      <!-- Product 3 -->
       <div class="product-card">
-        <img src="https://i.imgur.com/O3Jp2FB.jpg" alt="Tote Bag 3">
-        <h3>Minimal Logo Tote</h3>
-        <p class="price">₹299</p>
-        <button onclick="addToCart('Minimal Logo Tote', 299)">Add to Cart</button>
+        <img src="images/march.jpg" alt="March Tote Bag" />
+        <h3>March Tote Bag</h3>
+        <p>₹299</p>
+        <a href="https://rzp.io/l/alankriti-bags" class="btn buy-now">Buy Now</a>
+        <button class="btn add-to-cart">Add to Cart</button>
       </div>
-
+      <div class="product-card">
+        <img src="images/may.jpg" alt="May Tote Bag" />
+        <h3>May Tote Bag</h3>
+        <p>₹299</p>
+        <a href="https://rzp.io/l/alankriti-bags" class="btn buy-now">Buy Now</a>
+        <button class="btn add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/june.jpg" alt="June Tote Bag" />
+        <h3>June Tote Bag</h3>
+        <p>₹299</p>
+        <a href="https://rzp.io/l/alankriti-bags" class="btn buy-now">Buy Now</a>
+        <button class="btn add-to-cart">Add to Cart</button>
+      </div>
     </div>
   </section>
 
-  <!-- Cart Modal -->
-  <div class="cart-modal" id="cart-modal">
-    <h2>Your Cart</h2>
-    <ul id="cart-items"></ul>
-    <p><strong>Total: ₹<span id="cart-total">0</span></strong></p>
-    <a href="https://rzp.io" class="btn">Checkout</a>
-    <button class="btn" onclick="toggleCart()">Close</button>
-  </div>
+  <section id="buy" class="buy">
+    <h2>Buy Now</h2>
+    <p>Best Quality Tote Bags | Custom Designed | Razorpay | Paytm | Cash on Delivery</p>
+    <a href="https://rzp.io/l/alankriti-bags" class="btn">Order with Razorpay</a>
+    <p style="margin-top: 10px;">Or DM us on WhatsApp to order via Paytm or COD</p>
+    <a href="https://wa.me/918920678211" class="btn whatsapp">Message on WhatsApp</a>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Alankriti Creations | Made with 💛 in India</p>
+    <p>&copy; 2025 Alankriti Creations. All rights reserved.</p>
   </footer>
-
-  <script>
-    let cart = [];
-    let cartCount = 0;
-    let total = 0;
-
-    function addToCart(name, price) {
-      cart.push({ name, price });
-      cartCount++;
-      total += price;
-      document.getElementById('cart-count').textContent = cartCount;
-      updateCart();
-    }
-
-    function updateCart() {
-      const cartList = document.getElementById('cart-items');
-      const cartTotal = document.getElementById('cart-total');
-      cartList.innerHTML = '';
-      cart.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = `${item.name} - ₹${item.price}`;
-        cartList.appendChild(li);
-      });
-      cartTotal.textContent = total;
-    }
-
-    function toggleCart() {
-      const modal = document.getElementById('cart-modal');
-      modal.classList.toggle('show');
-    }
-  </script>
 </body>
 </html>
