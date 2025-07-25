@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Alankriti Creations</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="images/logo.png" />
+  <link rel="icon" href="images/bag1.jpg" />
 </head>
 <body>
 
@@ -19,9 +19,6 @@
     </div>
   </header>
 
-  <!-- Scroll to Top -->
-  <button id="scrollTopBtn">⬆</button>
-
   <!-- About Section -->
   <section class="about">
     <h2>Unleash Your Creativity</h2>
@@ -32,82 +29,54 @@
     </p>
   </section>
 
-  <!-- Why Choose Us -->
+  <!-- Features Section -->
   <section class="features">
     <h2>Why Choose Us?</h2>
     <ul>
-      <li><strong>🎨 Design Your Dream:</strong> From a photo, quote, logo or artwork – if you imagine it, we can print it!</li>
+      <li><strong>🎨 Design Your Dream:</strong> If you imagine it, we can print it!</li>
       <li><strong>👜 Premium Quality:</strong> High-quality fabric made to last.</li>
       <li><strong>📦 Spacious & Practical:</strong> Carry all your essentials in style.</li>
-      <li><strong>🎁 Perfect Gift:</strong> Great for birthdays, corporate events & more.</li>
+      <li><strong>🎁 Perfect Gift:</strong> Great for birthdays, events & more.</li>
       <li><strong>🌱 Eco-Friendly:</strong> Say goodbye to single-use plastics.</li>
     </ul>
-  </section>
-
-  <!-- How It Works -->
-  <section class="how-it-works">
-    <h2>How It Works</h2>
-    <p>Send us your design idea – we’ll bring it to life on a premium tote bag. We can even hand-draw your vision!</p>
   </section>
 
   <!-- Product Section -->
   <section id="products" class="gallery">
     <h2>Our Tote Bags</h2>
     <div class="product-grid">
-
-      <!-- Product Card 1 -->
       <div class="product-card">
-        <img src="images/img1.jpg" alt="Tote Bag 1" />
-        <h3>Floral Design Tote</h3>
-        <p>Price: ₹299</p>
-        <button class="btn add-cart-btn" data-name="Floral Tote" data-price="299">Add to Cart</button>
+        <img src="images/bag1.jpg" alt="Floral Tote" />
+        <h3>Floral Tote</h3>
+        <p class="price">₹299</p>
+        <button class="btn add-cart-btn" onclick="addToCart(1)">Add to Cart</button>
       </div>
-
-      <!-- Product Card 2 -->
       <div class="product-card">
-        <img src="images/img2.jpg" alt="Tote Bag 2" />
-        <h3>Abstract Art Tote</h3>
-        <p>Price: ₹299</p>
-        <button class="btn add-cart-btn" data-name="Abstract Tote" data-price="299">Add to Cart</button>
+        <img src="images/bag2.jpg" alt="Canvas Love" />
+        <h3>Canvas Love</h3>
+        <p class="price">₹299</p>
+        <button class="btn add-cart-btn" onclick="addToCart(2)">Add to Cart</button>
       </div>
-
-      <!-- Product Card 3 -->
       <div class="product-card">
-        <img src="images/img3.jpg" alt="Tote Bag 3" />
-        <h3>Custom Name Tote</h3>
-        <p>Price: ₹299</p>
-        <button class="btn add-cart-btn" data-name="Name Tote" data-price="299">Add to Cart</button>
+        <img src="images/bag3.jpg" alt="Elegant Print" />
+        <h3>Elegant Print</h3>
+        <p class="price">₹299</p>
+        <button class="btn add-cart-btn" onclick="addToCart(3)">Add to Cart</button>
       </div>
-
-      <!-- Product Card 4 -->
       <div class="product-card">
-        <img src="images/img4.jpg" alt="Tote Bag 4" />
-        <h3>Modern Pattern Tote</h3>
-        <p>Price: ₹299</p>
-        <button class="btn add-cart-btn" data-name="Pattern Tote" data-price="299">Add to Cart</button>
+        <img src="images/bag4.jpg" alt="Eco Chic" />
+        <h3>Eco Chic</h3>
+        <p class="price">₹299</p>
+        <button class="btn add-cart-btn" onclick="addToCart(4)">Add to Cart</button>
       </div>
-
     </div>
   </section>
-
-  <!-- Checkout Section -->
-  <section class="buy">
-    <h2>Order Now</h2>
-    <p>Best Quality Tote Bags | Custom Designed | Razorpay | Paytm | Cash on Delivery</p>
-    <a href="https://rzp.io/l/alankriti-bags" class="btn">Order with Razorpay</a>
-    <p style="margin-top: 10px;">Or message us for Paytm or COD</p>
-    <a href="https://wa.me/91XXXXXXXXXX" class="btn whatsapp">Message on WhatsApp</a>
-  </section>
-
-  <!-- Toast Popup -->
-  <div id="toast">✅ Item added!</div>
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Alankriti Creations. All rights reserved.</p>
   </footer>
 
-  <!-- Scripts -->
   <script src="script.js"></script>
 </body>
 </html>
