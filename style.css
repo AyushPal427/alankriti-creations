@@ -1,125 +1,92 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alankriti Creations</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <h1>Alankriti Creations</h1>
+    <p>Customised Tote Bags – Your Style, Your Way</p>
+    <a href="#products" class="btn">Shop Now</a>
+    <div class="cart-icon" onclick="toggleCart()">🛒 Cart (<span id="cart-count">0</span>)</div>
+  </header>
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  line-height: 1.6;
-  background: #fffdf8;
-  color: #333;
-}
+  <section class="products" id="products">
+    <h2>Our Tote Bags</h2>
+    <div class="product-grid">
 
-header.hero {
-  background: #f7d9e3;
-  padding: 60px 20px;
-  text-align: center;
-}
+      <!-- Product 1 -->
+      <div class="product-card">
+        <img src="https://i.imgur.com/yYcQGQZ.jpg" alt="Tote Bag 1">
+        <h3>Floral Custom Tote</h3>
+        <p class="price">₹299</p>
+        <button onclick="addToCart('Floral Custom Tote', 299)">Add to Cart</button>
+      </div>
 
-header.hero h1 {
-  font-size: 2.8rem;
-  margin-bottom: 10px;
-}
+      <!-- Product 2 -->
+      <div class="product-card">
+        <img src="https://i.imgur.com/Bc3Ewz8.jpg" alt="Tote Bag 2">
+        <h3>Modern Quote Tote</h3>
+        <p class="price">₹299</p>
+        <button onclick="addToCart('Modern Quote Tote', 299)">Add to Cart</button>
+      </div>
 
-header.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
+      <!-- Product 3 -->
+      <div class="product-card">
+        <img src="https://i.imgur.com/O3Jp2FB.jpg" alt="Tote Bag 3">
+        <h3>Minimal Logo Tote</h3>
+        <p class="price">₹299</p>
+        <button onclick="addToCart('Minimal Logo Tote', 299)">Add to Cart</button>
+      </div>
 
-.btn {
-  display: inline-block;
-  background: #e75480;
-  color: #fff;
-  padding: 12px 24px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  margin: 10px 5px;
-}
+    </div>
+  </section>
 
-.btn:hover {
-  background: #c8436e;
-}
+  <!-- Cart Modal -->
+  <div class="cart-modal" id="cart-modal">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p><strong>Total: ₹<span id="cart-total">0</span></strong></p>
+    <a href="https://rzp.io" class="btn">Checkout</a>
+    <button class="btn" onclick="toggleCart()">Close</button>
+  </div>
 
-section {
-  padding: 40px 20px;
-  text-align: center;
-}
+  <footer>
+    <p>&copy; 2025 Alankriti Creations | Made with 💛 in India</p>
+  </footer>
 
-.features ul {
-  list-style: none;
-  padding: 0;
-}
+  <script>
+    let cart = [];
+    let cartCount = 0;
+    let total = 0;
 
-.features li {
-  margin: 10px 0;
-  font-size: 1.1rem;
-}
+    function addToCart(name, price) {
+      cart.push({ name, price });
+      cartCount++;
+      total += price;
+      document.getElementById('cart-count').textContent = cartCount;
+      updateCart();
+    }
 
-.product-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
+    function updateCart() {
+      const cartList = document.getElementById('cart-items');
+      const cartTotal = document.getElementById('cart-total');
+      cartList.innerHTML = '';
+      cart.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.name} - ₹${item.price}`;
+        cartList.appendChild(li);
+      });
+      cartTotal.textContent = total;
+    }
 
-.product-card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  width: 250px;
-  padding: 20px;
-}
-
-.product-card img {
-  width: 100%;
-  border-radius: 6px;
-  margin-bottom: 10px;
-}
-
-.cart-btn {
-  background: #444;
-  margin-top: 10px;
-}
-
-.contact a {
-  color: #e75480;
-  text-decoration: none;
-}
-
-.contact a:hover {
-  text-decoration: underline;
-}
-
-footer {
-  background: #f0f0f0;
-  padding: 20px;
-  text-align: center;
-  font-size: 0.9rem;
-}
-
-.footer-links a {
-  color: #333;
-  margin: 0 10px;
-  text-decoration: none;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
-}
-
-@media (max-width: 600px) {
-  .product-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  header.hero h1 {
-    font-size: 2rem;
-  }
-
-  header.hero p {
-    font-size: 1rem;
-  }
-}
+    function toggleCart() {
+      const modal = document.getElementById('cart-modal');
+      modal.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
