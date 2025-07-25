@@ -1,20 +1,25 @@
-<!-- ✅ cart.html - Full Cart Page --><!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Cart - Alankriti Creations</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Cart - Alankriti Creations</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="hero">
     <h1>Your Cart</h1>
-    <a href="index.html" class="btn">⬅ Back to Shopping</a>
-  </header>  <section class="cart-container">
-    <div id="cart-items"></div>
-    <div id="cart-summary">
-      <h3>Total: ₹<span id="cart-total">0</span></h3>
-      <button class="btn" onclick="checkoutRazorpay()">Pay with Razorpay</button>
-      <a class="btn whatsapp" href="#" id="whatsapp-link">Order via WhatsApp</a>
+    <div class="cart-icon">
+      <a href="cart.html">🛒 <span id="cart-count">0</span></a>
     </div>
-  </section>  <script src="script.js"></script></body>
+  </header>
+
+  <section class="container">
+    <div id="cart-items"></div>
+    <h3>Total: ₹<span id="cart-total">0</span></h3>
+    <button class="btn buy-now" onclick="checkoutRazorpay()">Checkout with Razorpay</button>
+    <a id="whatsapp-link" class="btn whatsapp" href="#" target="_blank">Order via WhatsApp</a>
+  </section>
+
+  <script src="script.js"></script>
+</body>
 </html>
